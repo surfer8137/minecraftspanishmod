@@ -44,34 +44,18 @@ public class ModItems {
     }
 
     /**
-     * Register items in Minecraft
-     */
-    public static void registerItems() {
-        for(Item item : modItems)
-            ForgeRegistries.ITEMS.register(item);
-    }
-
-    /**
      * Register renders of items in Minecraft
      */
     public static void registerRenders() {
         for(Item item : modItems)
-            registerRender(item);
+            ItemHelper.registerRender(item);
     }
 
     /**
-     * Registers an item render
-     *
-     * @param item item to register
+     * Register items in Minecraft
      */
-    private static void registerRender(Item item) {
-        ModelLoader.setCustomModelResourceLocation(
-                item,
-                0,
-                new ModelResourceLocation(
-                        item.getRegistryName(),
-                        "inventory"
-                )
-        );
+    private static void registerItems() {
+        for(Item item : modItems)
+            ForgeRegistries.ITEMS.register(item);
     }
 }
