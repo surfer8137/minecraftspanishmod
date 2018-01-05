@@ -1,7 +1,7 @@
-#Minecraft Spanish Mod (MSM)#
+<h1>Minecraft Spanish Mod (MSM)</h1>
 
-##How to code?##
-###IntelliJ###
+<h2>How to code?</h2>
+<h3>IntelliJ</h3>
 ------------------
 1. Run the setupDecompWorkspace gradle task on the forgegradle folder
 
