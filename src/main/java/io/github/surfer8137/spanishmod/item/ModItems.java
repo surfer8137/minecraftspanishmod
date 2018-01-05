@@ -6,17 +6,20 @@ import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.util.EnumHelper;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by Angel on 04/01/2018.
  */
 public class ModItems {
-    private static Item flagItem;
-    private static Item patxiFistItem;
+    public static Item flagItem;
+    public static Item patxiFistItem;
     private static List<Item> modItems;
+    private static List<Item> itemsToRender;
 
     /**
      * Creation of the items and the list that contains every mod item
@@ -32,8 +35,12 @@ public class ModItems {
                 30
         ));
 
+        modItems = new ArrayList<>();
         modItems.add(flagItem);
         modItems.add(patxiFistItem);
+
+        itemsToRender = new ArrayList<>();
+        itemsToRender.add(patxiFistItem);
     }
 
     /**
@@ -47,7 +54,7 @@ public class ModItems {
      * Register renders of items in Minecraft
      */
     public static void registerRenders() {
-        for(Item item : modItems)
+        for(Item item : itemsToRender)
             ItemHelper.registerRender(item);
     }
 
@@ -57,5 +64,6 @@ public class ModItems {
     private static void registerItems() {
         for(Item item : modItems)
             ForgeRegistries.ITEMS.register(item);
+
     }
 }

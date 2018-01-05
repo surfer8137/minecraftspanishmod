@@ -28,7 +28,7 @@ public class FlagItem extends Item {
     public FlagItem() {
         setUnlocalizedName(NAME);
         setCreativeTab(SpanishMod.spanishCreativeTab);
-        setRegistryName(new ModelResourceLocation(SpanishMod.MOD_ID, NAME));
+        setRegistryName(SpanishMod.MOD_ID + ":" + NAME);
         setMaxStackSize(MAX_STACK_SIZE);
     }
 

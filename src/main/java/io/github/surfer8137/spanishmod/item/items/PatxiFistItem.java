@@ -22,7 +22,7 @@ public class PatxiFistItem extends ItemSword {
         setCreativeTab(SpanishMod.spanishCreativeTab);
         setMaxStackSize(ITEM_STACK_SIZE);
         setMaxDamage(ITEM_MAX_DAMAGE);
-        setRegistryName(new ModelResourceLocation(SpanishMod.MOD_ID, NAME));
+        setRegistryName(SpanishMod.MOD_ID + ":" + NAME);
     }
 
     @Override
