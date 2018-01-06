@@ -19,7 +19,9 @@ public class ClientProxy extends Proxy {
         ModItems.registerRenders();
 
         OBJLoader.INSTANCE.addDomain(SpanishMod.MOD_ID);
-        registerModel(ModItems.flagItem);
+        registerModel(ModItems.spainFlag);
+        registerModel(ModItems.cataloniaFlag);
+        registerModel(ModItems.vasqueFlag);
     }
 
     public void registerModel(Item item){

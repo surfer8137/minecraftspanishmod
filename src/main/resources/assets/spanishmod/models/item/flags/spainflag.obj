@@ -1,6 +1,6 @@
 # Blender v2.79 (sub 0) OBJ File: 'flag.blend'
 # www.blender.org
-mtllib flag.mtl
+mtllib spainflag.mtl
 o Cube_Cube.001
 v -0.452362 33.976971 1.229241
 v -0.452362 67.529190 1.229247

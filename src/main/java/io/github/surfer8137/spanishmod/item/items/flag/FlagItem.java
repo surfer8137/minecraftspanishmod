@@ -1,4 +1,4 @@
-package io.github.surfer8137.spanishmod.item.items;
+package io.github.surfer8137.spanishmod.item.items.flag;
 
 import io.github.surfer8137.spanishmod.SpanishMod;
 import net.minecraft.client.Minecraft;
@@ -18,17 +18,19 @@ import java.util.List;
 /**
  * Created by Angel on 04/01/2018.
  */
-public class FlagItem extends Item {
-    public static final String NAME = "flag";
+public abstract class FlagItem extends Item {
     public static final int MAX_STACK_SIZE = 1;
-    public static final String USE_MESSAGE = "GORA EUSKADI";
-    public static final String ITEM_TOOLTIP = "Vasque flag";
     public static final EnumRarity ITEM_RARITY = EnumRarity.COMMON;
 
-    public FlagItem() {
-        setUnlocalizedName(NAME);
+    private String nationMessage;
+    private String itemTooltip;
+
+    public FlagItem(String unlocalizedName, String message, String tooltip) {
+        setUnlocalizedName(unlocalizedName);
         setCreativeTab(SpanishMod.spanishCreativeTab);
-        setRegistryName(SpanishMod.MOD_ID + ":" + NAME);
+        nationMessage = message;
+        itemTooltip = tooltip;
+        setRegistryName(SpanishMod.MOD_ID + ":" + unlocalizedName);
         setMaxStackSize(MAX_STACK_SIZE);
     }
 
@@ -37,7 +39,7 @@ public class FlagItem extends Item {
      */
     @Override
     public EnumActionResult onItemUse(EntityPlayer player, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
-        Minecraft.getMinecraft().player.sendChatMessage(USE_MESSAGE);
+        Minecraft.getMinecraft().player.sendChatMessage(nationMessage);
 
         return super.onItemUse(player, worldIn, pos, hand, facing, hitX, hitY, hitZ);
     }
@@ -47,7 +49,7 @@ public class FlagItem extends Item {
      */
     @Override
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
-        tooltip.add(ITEM_TOOLTIP);
+        tooltip.add(itemTooltip);
 
         super.addInformation(stack, worldIn, tooltip, flagIn);
     }
