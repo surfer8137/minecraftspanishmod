@@ -1,6 +1,7 @@
 package io.github.surfer8137.spanishmod.proxy;
 
 import io.github.surfer8137.spanishmod.SpanishMod;
+import io.github.surfer8137.spanishmod.block.ModBlocks;
 import io.github.surfer8137.spanishmod.item.ModItems;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
@@ -16,23 +17,10 @@ import net.minecraft.item.Item;
 public class ClientProxy extends Proxy {
     @Override
     public void preInit(FMLPreInitializationEvent event) {
-        ModItems.registerRenders();
-
         OBJLoader.INSTANCE.addDomain(SpanishMod.MOD_ID);
-        registerModel(ModItems.spainFlag);
-        registerModel(ModItems.cataloniaFlag);
-        registerModel(ModItems.vasqueFlag);
-    }
 
-    public void registerModel(Item item){
-        ModelLoader.setCustomModelResourceLocation(
-                item,
-                0,
-                new ModelResourceLocation(
-                        item.getRegistryName(),
-                        "inventory"
-                )
-        );
+        ModItems.registerRenders();
+        ModBlocks.registerRenders();
     }
 
     @Override

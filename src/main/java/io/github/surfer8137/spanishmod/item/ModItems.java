@@ -21,7 +21,6 @@ public class ModItems {
     public static FlagItem vasqueFlag;
     public static Item patxiFistItem;
     private static List<Item> modItems;
-    private static List<Item> itemsToRender;
 
     /**
      * Creation of the items and the list that contains every mod item
@@ -29,7 +28,7 @@ public class ModItems {
     static {
         spainFlag = new SpainFlagItem();
         cataloniaFlag = new CataloniaFlagItem();
-        vasqueFlag = new VasqueFlagItem();
+        //vasqueFlag = new VasqueFlagItem();
         patxiFistItem = new PatxiFistItem(EnumHelper.addToolMaterial(
                 "vasque",
                 0,
@@ -42,11 +41,8 @@ public class ModItems {
         modItems = new ArrayList<>();
         modItems.add(spainFlag);
         modItems.add(cataloniaFlag);
-        modItems.add(vasqueFlag);
+        //modItems.add(vasqueFlag);
         modItems.add(patxiFistItem);
-
-        itemsToRender = new ArrayList<>();
-        itemsToRender.add(patxiFistItem);
     }
 
     /**
@@ -60,7 +56,7 @@ public class ModItems {
      * Register renders of items in Minecraft
      */
     public static void registerRenders() {
-        for(Item item : itemsToRender)
+        for(Item item : modItems)
             ItemHelper.registerRender(item);
     }
 

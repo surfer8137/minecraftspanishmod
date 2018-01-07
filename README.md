@@ -8,6 +8,6 @@
 2. Run the genIntellijRuns gradle task on the forgegradle folder
 
 3. Run the Minecraft Cliente runner
-<hr>
-<hr>
+
+
 **This mod is made for humor purposes**

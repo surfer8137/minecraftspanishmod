@@ -1,5 +1,6 @@
 package io.github.surfer8137.spanishmod;
 
+import io.github.surfer8137.spanishmod.block.ModBlocks;
 import io.github.surfer8137.spanishmod.item.ModItems;
 import io.github.surfer8137.spanishmod.proxy.Proxy;
 import io.github.surfer8137.spanishmod.tab.SpanishCreativeTab;
@@ -32,8 +33,13 @@ public class SpanishMod {
      */
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
+        //Creation of the inventory tab for the creative mode to access the mod items.
         spanishCreativeTab = new SpanishCreativeTab(CreativeTabs.getNextID(), TAB_NAME);
+        //Initialization of the mod items
         ModItems.preInit();
+        //Initialization of mod blocks
+        ModBlocks.preInit();
+        //Initialization of the client proxy
         proxy.preInit(event);
     }
 
