@@ -4,7 +4,7 @@
 itemGroup.tabSpanish=Spanish Mod
 
 #Items
-tile.vasqueflag.name=Vasque Country Flag
-item.spainflag.name=Spain Flag
-item.cataloniaflag.name=Catalonia Flag
-item.patxifist.name=Lengedary Patxi fist
+tile.basqueflag.name=Basque Country Flag
+tile.spainflag.name=Spain Flag
+tile.cataloniaflag.name=Catalonia Flag
+item.patxifist.name=Patxi Fist

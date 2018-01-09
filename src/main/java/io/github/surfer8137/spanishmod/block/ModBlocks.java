@@ -1,6 +1,8 @@
 package io.github.surfer8137.spanishmod.block;
 
-import io.github.surfer8137.spanishmod.block.blocks.VasqueBlock;
+import io.github.surfer8137.spanishmod.block.blocks.BlockBasqueFlag;
+import io.github.surfer8137.spanishmod.block.blocks.BlockCataloniaFlag;
+import io.github.surfer8137.spanishmod.block.blocks.BlockSpainFlag;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemBlock;
@@ -13,17 +15,23 @@ import java.util.List;
  * Created by Angel on 04/01/2018.
  */
 public class ModBlocks {
-    public static final Block vasqueBlock;
+    public static final Block basqueFlagBlock;
+    public static final Block spainFlagBlock;
+    public static final Block cataloniaFlagBlock;
     private static List<Block> modBlocks;
 
     /**
      * Creation of the blocks and the list that contains every mod block
      */
     static {
-        vasqueBlock = new VasqueBlock(Material.GLASS, "vasqueflag");
+        basqueFlagBlock = new BlockBasqueFlag();
+        spainFlagBlock = new BlockSpainFlag();
+        cataloniaFlagBlock = new BlockCataloniaFlag();
 
         modBlocks = new ArrayList<>();
-        modBlocks.add(vasqueBlock);
+        modBlocks.add(basqueFlagBlock);
+        modBlocks.add(cataloniaFlagBlock);
+        modBlocks.add(spainFlagBlock);
     }
 
     /**

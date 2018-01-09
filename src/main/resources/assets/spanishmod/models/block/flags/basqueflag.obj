@@ -1,6 +1,6 @@
 # Blender v2.79 (sub 0) OBJ File: 'flag.blend'
 # www.blender.org
-mtllib vasqueflag.mtl
+mtllib basqueflag.mtl
 o Cube_Cube.001
 v 0.488691 1.427033 0.433190
 v 0.488691 2.836226 0.433190

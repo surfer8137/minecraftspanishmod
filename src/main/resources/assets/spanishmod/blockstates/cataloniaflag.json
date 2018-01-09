@@ -2,42 +2,52 @@
   "forge_marker": 1,
   "defaults": {
     "model": "spanishmod:flags/cataloniaflag.obj",
-    "custom": { "flip-v": true }
+    "custom": { "flip-v": true },
+    "uvlock": true
   },
   "variants": {
+    "normal": {
+      "model": "spanishmod:flags/cataloniaflag.obj"
+    },
+    "facing=north": {"y": 0},
+    "facing=south": { "y": 180},
+    "facing=east": {"y": 270},
+    "facing=west": { "y": 90},
+    "facing=down": {"y": 0},
+    "facing=up": { "y": 0},
     "inventory": [
       {
         "transform": {
           "thirdperson_lefthand": {
             "rotation": [ { "x": 0}, { "y": 0}, { "z": 0 } ],
             "translation": [0, -0.1, 0.1],
-            "scale": 0.05
+            "scale": 0.5
           },
           "thirdperson_righthand": {
             "rotation": [ { "x": 0}, { "y": 0}, { "z": 0 } ],
             "translation": [0, -0.1, 0.1],
-            "scale": 0.05
+            "scale": 0.5
           },
           "gui": {
             "rotation": [ { "x": -25}, { "y": 0}, { "z": -45 } ],
             "rotation": [ { "x": -25}, { "y": 0}, { "z": -45 } ],
             "translation": [-0.5, -0.5, 0.5],
-            "scale": 0.02
+            "scale": 0.6
           },
           "firstperson_righthand": {
             "rotation": [ { "x": 180}, { "y": 180}, { "z": 170 } ],
             "translation": [0, -0.1, 0.1],
-            "scale": 0.05
+            "scale": 0.5
           },
           "firstperson_lefthand": {
             "rotation": [ { "x": 180}, { "y": 180}, { "z": 170 } ],
             "translation": [0, -0.1, 0.1],
-            "scale": 0.05
+            "scale": 0.5
           },
           "ground": {
             "rotation": [ { "x": 45}, { "y": 0}, { "z": 0 } ],
             "translation": [0, -0.1, 0.1],
-            "scale": 0.025
+            "scale": 0.5
           }
         }
       }

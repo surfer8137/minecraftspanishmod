@@ -2,38 +2,36 @@ package io.github.surfer8137.spanishmod.block.blocks;
 
 import io.github.surfer8137.spanishmod.SpanishMod;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockContainer;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.*;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
-import java.util.List;
 
 /**
  * Created by Angel on 06/01/2018.
  */
-public class VasqueBlock extends Block {
+public class BlockSpainFlag extends Block {
     private static final PropertyEnum<EnumFacing> FACING = PropertyEnum.<EnumFacing>create("facing", EnumFacing.class);
+    public static final String FLAG_NAME = "spainflag";
 
-    public VasqueBlock(Material materialIn, String name) {
-        super(materialIn);
-        setUnlocalizedName(name);
+    public BlockSpainFlag() {
+        super(Material.GLASS);
+        setUnlocalizedName(FLAG_NAME);
         setCreativeTab(SpanishMod.spanishCreativeTab);
         setHardness(1.0f);
         setResistance(10);
         setSoundType(SoundType.METAL);
-        setRegistryName(SpanishMod.MOD_ID + ":" + name);
+        setRegistryName(SpanishMod.MOD_ID + ":" + FLAG_NAME);
         setDefaultState(blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
     }
 
