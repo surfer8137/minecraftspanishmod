@@ -1,10 +1,9 @@
 package io.github.surfer8137.spanishmod.block;
 
-import io.github.surfer8137.spanishmod.block.blocks.BlockBasqueFlag;
-import io.github.surfer8137.spanishmod.block.blocks.BlockCataloniaFlag;
-import io.github.surfer8137.spanishmod.block.blocks.BlockSpainFlag;
+import io.github.surfer8137.spanishmod.block.blocks.flag.flags.BlockBasqueFlag;
+import io.github.surfer8137.spanishmod.block.blocks.flag.flags.BlockCataloniaFlag;
+import io.github.surfer8137.spanishmod.block.blocks.flag.flags.BlockSpainFlag;
 import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 
@@ -15,9 +14,9 @@ import java.util.List;
  * Created by Angel on 04/01/2018.
  */
 public class ModBlocks {
-    public static final Block basqueFlagBlock;
-    public static final Block spainFlagBlock;
-    public static final Block cataloniaFlagBlock;
+    private static final Block basqueFlagBlock;
+    private static final Block spainFlagBlock;
+    private static final Block cataloniaFlagBlock;
     private static List<Block> modBlocks;
 
     /**

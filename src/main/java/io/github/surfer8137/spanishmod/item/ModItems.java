@@ -12,7 +12,7 @@ import java.util.List;
  * Created by Angel on 04/01/2018.
  */
 public class ModItems {
-    public static Item patxiFistItem;
+    private static Item patxiFistItem;
     private static List<Item> modItems;
 
     /**
@@ -20,7 +20,7 @@ public class ModItems {
      */
     static {
         patxiFistItem = new PatxiFistItem(EnumHelper.addToolMaterial(
-                "vasque",
+                "basque",
                 0,
                 5,
                 10.0f,
