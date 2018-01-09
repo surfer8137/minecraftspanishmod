@@ -1,5 +1,6 @@
 package io.github.surfer8137.spanishmod.block;
 
+import io.github.surfer8137.spanishmod.block.blocks.flag.flags.BlockBaseFlag;
 import io.github.surfer8137.spanishmod.block.blocks.flag.flags.BlockBasqueFlag;
 import io.github.surfer8137.spanishmod.block.blocks.flag.flags.BlockCataloniaFlag;
 import io.github.surfer8137.spanishmod.block.blocks.flag.flags.BlockSpainFlag;
@@ -14,9 +15,10 @@ import java.util.List;
  * Created by Angel on 04/01/2018.
  */
 public class ModBlocks {
-    private static final Block basqueFlagBlock;
-    private static final Block spainFlagBlock;
-    private static final Block cataloniaFlagBlock;
+    public static final Block basqueFlagBlock;
+    public static final Block spainFlagBlock;
+    public static final Block cataloniaFlagBlock;
+    public static final Block baseFlagBlock;
     private static List<Block> modBlocks;
 
     /**
@@ -26,11 +28,13 @@ public class ModBlocks {
         basqueFlagBlock = new BlockBasqueFlag();
         spainFlagBlock = new BlockSpainFlag();
         cataloniaFlagBlock = new BlockCataloniaFlag();
+        baseFlagBlock = new BlockBaseFlag();
 
         modBlocks = new ArrayList<>();
         modBlocks.add(basqueFlagBlock);
         modBlocks.add(cataloniaFlagBlock);
         modBlocks.add(spainFlagBlock);
+        modBlocks.add(baseFlagBlock);
     }
 
     /**

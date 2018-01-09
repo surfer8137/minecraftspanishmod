@@ -44,7 +44,7 @@ public class SpanishMod {
     }
 
     /**
-     * Method called by the init event
+     * Method called by the preInit event
      * @param event
      */
     @EventHandler

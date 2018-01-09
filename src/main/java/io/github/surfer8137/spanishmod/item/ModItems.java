@@ -12,7 +12,7 @@ import java.util.List;
  * Created by Angel on 04/01/2018.
  */
 public class ModItems {
-    private static Item patxiFistItem;
+    public static Item patxiFistItem;
     private static List<Item> modItems;
 
     /**

@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " RR",
+    "FYY",
+    " RR"
+  ],
+  "key": {
+    "F": [
+      {
+        "item": "spanishmod:baseflag",
+        "data": 0
+      }
+    ],
+    "R": [
+      {
+        "item": "minecraft:dye",
+        "data": 1
+      }
+    ],
+    "Y": [
+      {
+        "item": "minecraft:dye",
+        "data": 11
+      }
+    ]
+  },
+  "result": {
+    "item": "spanishmod:spainflag",
+    "data": 0
+  }
+}

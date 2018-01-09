@@ -5,6 +5,7 @@ itemGroup.tab_patxi=Mod Patxi
 
 #Items
 tile.basqueflag.name=Bandera del Pais Vasco
+tile.baseflag.name=Bandera
 tile.spainflag.name=Bandera de España
 tile.cataloniaflag.name=Bandera de Cataluña
 item.patxifist.name=Puño de Patxi

@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " GW",
+    "FWW",
+    " GW"
+  ],
+  "key": {
+    "F": [
+      {
+        "item": "spanishmod:baseflag",
+        "data": 0
+      }
+    ],
+    "W": [
+      {
+        "item": "minecraft:dye",
+        "data": 15
+      }
+    ],
+    "G": [
+      {
+        "item": "minecraft:dye",
+        "data": 2
+      }
+    ]
+  },
+  "result": {
+    "item": "spanishmod:basqueflag",
+    "data": 0
+  }
+}
