@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "OOO",
+    "CDC",
+    "CCC"
+  ],
+  "key": {
+    "O": [
+      {
+        "item": "minecraft:obsidian",
+        "data": 0
+      }
+    ],
+    "C": [
+      {
+        "item": "minecraft:rotten_flesh",
+        "data": 0
+      }
+    ],
+    "D": [
+      {
+        "item": "minecraft:diamond",
+        "data": 0
+      }
+    ]
+  },
+  "result": {
+    "item": "spanishmod:patxifist",
+    "data": 0
+  }
+}

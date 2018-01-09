@@ -6,6 +6,7 @@ import io.github.surfer8137.spanishmod.utils.ModHelper;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.*;
+import net.minecraftforge.common.util.EnumHelper;
 
 /**
  * Created by Angel on 04/01/2018.
@@ -16,8 +17,15 @@ public class PatxiFistItem extends ItemSword {
     private static final int ITEM_MAX_DAMAGE = 5;
     public static final String HIT_MESSAGE = "POR EL PODER DE PATXI";
 
-    public PatxiFistItem(ToolMaterial material) {
-        super(material);
+    public PatxiFistItem() {
+        super(EnumHelper.addToolMaterial(
+                "basque",
+                0,
+                5,
+                10.0f,
+                10.0f,
+                30
+        ));
         setUnlocalizedName(NAME);
         setCreativeTab(SpanishMod.spanishCreativeTab);
         setMaxStackSize(ITEM_STACK_SIZE);

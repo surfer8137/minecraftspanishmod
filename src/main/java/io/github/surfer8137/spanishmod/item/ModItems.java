@@ -19,14 +19,7 @@ public class ModItems {
      * Creation of the items and the list that contains every mod item
      */
     static {
-        patxiFistItem = new PatxiFistItem(EnumHelper.addToolMaterial(
-                "basque",
-                0,
-                5,
-                10.0f,
-                10.0f,
-                30
-        ));
+        patxiFistItem = new PatxiFistItem();
 
         modItems = new ArrayList<>();
         modItems.add(patxiFistItem);
