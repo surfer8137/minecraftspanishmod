@@ -8,6 +8,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.*;
@@ -17,12 +18,13 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
+import java.util.List;
 
 /**
  * Created by Angel on 06/01/2018.
  */
 public class VasqueBlock extends Block {
-    public static final PropertyEnum<EnumFacing> FACING = PropertyEnum.<EnumFacing>create("facing", EnumFacing.class);
+    private static final PropertyEnum<EnumFacing> FACING = PropertyEnum.<EnumFacing>create("facing", EnumFacing.class);
 
     public VasqueBlock(Material materialIn, String name) {
         super(materialIn);
@@ -40,9 +42,7 @@ public class VasqueBlock extends Block {
         return false;
     }
 
-    /**
-     * Convert the given metadata into a BlockState for this Block
-     */
+    @Override
     public IBlockState getStateFromMeta(int meta) {
         EnumFacing enumfacing = EnumFacing.getFront(meta);
 
@@ -54,20 +54,31 @@ public class VasqueBlock extends Block {
         worldIn.destroyBlock(pos, true);
     }
 
-    /**
-     * Convert the BlockState into the correct metadata value
-     */
+    @Override
     public int getMetaFromState(IBlockState state) {
         return ((EnumFacing) state.getValue(FACING)).getIndex();
     }
 
     @Override
+    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
+        return new AxisAlignedBB(0,0,0,1,1,1);
+    }
+
+    @Nullable
+    @Override
+    public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, IBlockAccess worldIn, BlockPos pos) {
+        return new AxisAlignedBB(0,0,0,0,0,0);
+    }
+
+    @Override
     public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state) {
-        //If there is no block down
         if (worldIn.isAirBlock(new BlockPos(pos.getX(), pos.getY() - 1, pos.getZ()))) {
             worldIn.destroyBlock(pos, true);
         }
         if (!worldIn.isAirBlock(new BlockPos(pos.getX(), pos.getY() + 1, pos.getZ()))) {
+            worldIn.destroyBlock(pos, true);
+        }
+        if (!worldIn.isAirBlock(new BlockPos(pos.getX(), pos.getY() + 2, pos.getZ()))) {
             worldIn.destroyBlock(pos, true);
         }
     }
@@ -102,27 +113,6 @@ public class VasqueBlock extends Block {
 
         worldIn.setBlockState(pos, getDefaultState().withProperty(FACING, enumfacing));
         return true;
-    }
-
-    @Override
-    public void onBlockClicked(World worldIn, BlockPos pos, EntityPlayer playerIn) {
-        EnumFacing enumfacing = EnumFacing.getFront(getMetaFromState(worldIn.getBlockState(pos)));
-
-        if (enumfacing == EnumFacing.DOWN || enumfacing == EnumFacing.UP) {
-            enumfacing = EnumFacing.NORTH;
-        }
-
-        if (enumfacing == EnumFacing.NORTH) {
-            enumfacing = EnumFacing.EAST;
-        } else if (enumfacing == EnumFacing.EAST) {
-            enumfacing = EnumFacing.SOUTH;
-        } else if (enumfacing == EnumFacing.SOUTH) {
-            enumfacing = EnumFacing.WEST;
-        } else if (enumfacing == EnumFacing.WEST) {
-            enumfacing = EnumFacing.NORTH;
-        }
-
-        worldIn.setBlockState(pos, getDefaultState().withProperty(FACING, enumfacing));
     }
 
     @Override

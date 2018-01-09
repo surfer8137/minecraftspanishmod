@@ -9,12 +9,12 @@
     "normal": {
       "model": "spanishmod:flags/vasqueflag.obj"
     },
-    "facing=north": {"model": "spanishmod:flags/vasqueflag.obj", "y": 0},
-    "facing=south": {"model": "spanishmod:flags/vasqueflag.obj", "y": 180},
-    "facing=east": {"model": "spanishmod:flags/vasqueflag.obj", "y": 270},
-    "facing=west": {"model": "spanishmod:flags/vasqueflag.obj", "y": 90},
-    "facing=down": {"model": "spanishmod:flags/vasqueflag.obj", "y": 90},
-    "facing=up": {"model": "spanishmod:flags/vasqueflag.obj", "y": 90},
+    "facing=north": {"y": 0},
+    "facing=south": { "y": 180},
+    "facing=east": {"y": 270},
+    "facing=west": { "y": 90},
+    "facing=down": {"y": 0},
+    "facing=up": { "y": 0},
     "inventory": [
       {
         "transform": {
